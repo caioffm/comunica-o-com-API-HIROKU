@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boas-vindas</title>
+    <link rel="stylesheet" href="css/welcome.css">
+</head>
+<body>
+    <div class="welcome-container">
+        <h1>Bem-vindo à Aplicação!</h1>
+        <p>Você fez login com sucesso com o email: <span id="user-email"></span></p>
+    </div>
+    <script>
+        // Recupera o email do localStorage e exibe na página
+        const userEmail = localStorage.getItem("userEmail");
+        if (userEmail) {
+            document.getElementById("user-email").textContent = userEmail;
+        }
+    </script>
+</body>
+</html>
